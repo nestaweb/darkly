@@ -11,3 +11,6 @@ In our case, I went to the page recover. In this page there is only a text and a
 ```
 
 Then I change the value of the hidden input and I submit the form. The flag is displayed.
+
+## How to prevent it
+To prevent Hidden Field Manipulation, you should not store sensitive information in hidden fields. Instead, you should store sensitive information on the server side and only use hidden fields for non-sensitive information.
