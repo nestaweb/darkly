@@ -6,7 +6,7 @@ This technique involves manipulating HTTP headers to trick the server into belie
 ## BornToSec
 When you click on the copyright icon, it redirects you to the following URL:
 ```
-http://10.11.249.222/?page=
+http://10.11.249.222/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f
 ````
 
 If you inspect the html, you will see some useless information. But if you look closer, you will see two key elements:
@@ -25,7 +25,7 @@ and
 The referrer tells the web server where the request originated from, and the User-Agent header provides information about the client's browser. By setting these headers to the expected values, you can access the flag.
 
 ```bash
-curl --referer "https://www.nsa.gov/" --user-agent "ft_bornToSec" http://10.11.249.222/\?page\=
+curl --referer "https://www.nsa.gov/" --user-agent "ft_bornToSec" http://10.11.249.222/\?page\=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f
 ```
 
 ## How to prevent it
